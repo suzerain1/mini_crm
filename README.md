@@ -1,64 +1,61 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
+Mini CRM
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+Feature:
+- Login as Admin
+- Add/Update/Delete Companies
+- List all Companies (10 per page)
+- List all Employess (on Company overview page)
+- Add/Update/Delete Employees
 
-## About Laravel
+Development:
+- Laravel 8
+- Vue 3
+- Seeder for generating companies and admin user
+- mysql
+- Laravel Sanctum (Auth)
+- db name: minicrm
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+Prerequisite:
+- composer
+- node.js
+- npm
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+Credential:
+Email: admin@admin.com
+Pass: password
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+Setup:
+- Extract file on xampp/htdocs (I'm using xampp)
+- Open terminal in project directory
+- Create database:
+  - run "mysql -u root -p"
+  - run "create database minicrm" to create database
+  - exit
+- Table migration:
+  - run "php artisan migrate"
+- Create admin credentials
+  - run "php aritsan db:seed --class=UserSeeder"
+- run "npm install"
+- run xampp Apache and Mysql
+- run "php artisan serve"
+- run "npm run dev"
 
-## Learning Laravel
+To populate 1 random company data just run "php artisan db:seed class=CompanySeeder"
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+Local link: http://127.0.0.1:8000/
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+Screenshots:
 
-## Laravel Sponsors
+![image](https://user-images.githubusercontent.com/72533239/159283282-ae6a8119-6c33-45df-a238-22e27f9e5e2f.png)
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+![image](https://user-images.githubusercontent.com/72533239/159283090-89444a2d-bc4f-45f0-993e-11908abdd442.png)
 
-### Premium Partners
+![image](https://user-images.githubusercontent.com/72533239/159283233-417e02a6-54cf-4b0e-8143-cfc75e3c1bf1.png)
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+![image](https://user-images.githubusercontent.com/72533239/159283353-3b94240a-d973-45fd-b0a6-a2a297530cae.png)
 
-## Contributing
+![image](https://user-images.githubusercontent.com/72533239/159283423-85695c4e-131e-4d0c-b369-83db9e700855.png)
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+![image](https://user-images.githubusercontent.com/72533239/159283493-5df2b601-7d2e-4379-a2a6-aadeb332a305.png)
 
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+![image](https://user-images.githubusercontent.com/72533239/159283573-40cf90c9-c624-4b48-9c87-55293fd824ac.png)
