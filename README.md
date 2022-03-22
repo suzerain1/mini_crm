@@ -37,6 +37,7 @@ Setup:
   - run "php aritsan db:seed --class=UserSeeder"
 - run "npm install"
 - run xampp Apache and Mysql
+- run "php artisan storage:link"
 - run "php artisan serve"
 - run "npm run dev"
 
